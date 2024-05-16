@@ -37,6 +37,7 @@ public class DocumentServiceImpl implements DocumentService {
                     .setBold()
                     .setTextAlignment(TextAlignment.CENTER);
             document.add(title);
+            document.add(new Paragraph("\n\n"));
 
             // Add Contract Information Table
             Table table = new Table(2);
@@ -57,6 +58,7 @@ public class DocumentServiceImpl implements DocumentService {
             table.addCell("Product Name").addCell(data.get("productName").toString());
             table.addCell("Product Description").addCell(data.get("productDescription").toString());
             document.add(table);
+            document.add(new Paragraph("\n\n"));
 
             // Add Legal Information
             Paragraph legalInfo = new Paragraph("Legal Information")
@@ -72,6 +74,7 @@ public class DocumentServiceImpl implements DocumentService {
                     "rules of the International Chamber of Commerce. The parties agree to " +
                     "comply with all applicable laws and regulations in the performance of this contract.");
             document.add(legalText);
+            document.add(new Paragraph("\n\n"));
 
             // Add Terms and Conditions
             Paragraph termsTitle = new Paragraph("Terms and Conditions")
@@ -86,11 +89,13 @@ public class DocumentServiceImpl implements DocumentService {
                     "4. The dealer shall not be liable for any damage caused by unauthorized repairs.\n" +
                     "5. This contract is valid for the specified period and can be renewed upon agreement.");
             document.add(termsText);
+            document.add(new Paragraph("\n"));
 
             // Add Generation Date and Signatures
             Paragraph date = new Paragraph("Date of Generation: " + LocalDate.now())
                     .setTextAlignment(TextAlignment.LEFT);
             document.add(date);
+            document.add(new Paragraph("\n"));
 
             Paragraph signatures = new Paragraph("Signatures:")
                     .setTextAlignment(TextAlignment.LEFT)
