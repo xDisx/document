@@ -1,0 +1,19 @@
+{
+  "data": {
+    "contractId": "123456",
+    "deviceCode": "DVC-001",
+    "deviceType": "Type A",
+    "deviceAcquisitionDate": "2023-01-15",
+    "contractPrice": "1000.00",
+    "contractPeriod": "12 months",
+    "customerFirstName": "John",
+    "customerLastName": "Doe",
+    "customerEmail": "john.doe@example.com",
+    "customerPhoneNumber": "123-456-7890",
+    "customerAddress": "123 Main St, Anytown, USA",
+    "contractStartDate": "2023-06-01",
+    "contractPlannedEndDate": "2024-06-01",
+    "productName": "SuperWidget",
+    "productDescription": "A high-quality widget that does everything you need."
+  }
+}
