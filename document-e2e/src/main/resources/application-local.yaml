@@ -1,5 +1,5 @@
 xdisx:
   service:
-    product:
+    document:
       client-name: document-app
       url: http://localhost:1236
