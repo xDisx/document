@@ -1,0 +1,4 @@
+server:
+  port: 1236
+  error:
+    include-message: always
