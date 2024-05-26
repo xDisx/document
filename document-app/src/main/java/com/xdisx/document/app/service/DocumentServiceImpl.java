@@ -31,7 +31,6 @@ public class DocumentServiceImpl implements DocumentService {
             Document document = new Document(pdfDoc, PageSize.A4);
             document.setMargins(20, 20, 20, 20);
 
-            // Add Title
             Paragraph title = new Paragraph("Maintenance Contract")
                     .setFontSize(24)
                     .setBold()
@@ -39,7 +38,6 @@ public class DocumentServiceImpl implements DocumentService {
             document.add(title);
             document.add(new Paragraph("\n\n"));
 
-            // Add Contract Information Table
             Table table = new Table(2);
             table.setWidth(500);
             table.addCell("Contract ID").addCell(data.get("contractId").toString());
@@ -60,7 +58,6 @@ public class DocumentServiceImpl implements DocumentService {
             document.add(table);
             document.add(new Paragraph("\n\n"));
 
-            // Add Legal Information
             Paragraph legalInfo = new Paragraph("Legal Information")
                     .setFontSize(16)
                     .setBold()
@@ -76,7 +73,6 @@ public class DocumentServiceImpl implements DocumentService {
             document.add(legalText);
             document.add(new Paragraph("\n\n"));
 
-            // Add Terms and Conditions
             Paragraph termsTitle = new Paragraph("Terms and Conditions")
                     .setFontSize(16)
                     .setBold()
@@ -91,7 +87,6 @@ public class DocumentServiceImpl implements DocumentService {
             document.add(termsText);
             document.add(new Paragraph("\n"));
 
-            // Add Generation Date and Signatures
             Paragraph date = new Paragraph("Date of Generation: " + LocalDate.now())
                     .setTextAlignment(TextAlignment.LEFT);
             document.add(date);
